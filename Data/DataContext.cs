@@ -8,7 +8,7 @@ namespace mba.events {
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Guest> Guests { get; set; }
-
+        public DbSet<Email> Emails { get; set; }
         // Necessari només quan l'aplicació és executada en mode consola - per tal que funcioni migrations add
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 

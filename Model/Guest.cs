@@ -1,16 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace mba.events
 {
-    public class Guest {
-        public int Id { get; set; }
+    public partial class Guest {
+        [Key]
         public string? DNI { get; set; }
         public string? Name { get; set; }
-        public string? Email { get; set; }
+        public List<Email>? Emails { get; set; }
 
         public List<Event>? Events { get; set; }
 
-        public override string ToString()
-        {
-            return $"({Id}) - {Name} ({DNI}) {Email}";
-        }
+        
     }
 }
