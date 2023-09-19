@@ -7,5 +7,10 @@ namespace mba.events
         public string? Email { get; set; }
 
         public List<Event>? Events { get; set; }
+
+        public override string ToString()
+        {
+            return $"({Id}) - {Name} ({DNI}) {Email}";
+        }
     }
 }

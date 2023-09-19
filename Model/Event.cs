@@ -7,5 +7,9 @@ namespace mba.events
         public DateTime? Date { get; set; }
 
         public List<Guest>? Guests { get; set; }
+        public override string ToString()
+        {
+            return $"({Id}) - {Name} ({Date}) {Description}";
+        }
     }
 }
